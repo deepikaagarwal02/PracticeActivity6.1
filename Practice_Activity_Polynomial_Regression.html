@@ -2247,10 +2247,11 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 </header>
 
 
+<p>Link to Github Repo: <a href="https://github.com/deepikaagarwal02/PracticeActivity6.1" class="uri">https://github.com/deepikaagarwal02/PracticeActivity6.1</a></p>
 <p>Import the Palmer Penguins dataset and print out the first few rows.</p>
 <p>Suppose we want to predict <code>bill_depth_mm</code> using the other variables in the dataset.</p>
 <p>Which variables would we need to <strong>dummify</strong>?</p>
-<div id="cell-2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="d3af270c-dcc5-49f4-dfef-b8d0e300b382" data-execution_count="3">
+<div id="cell-3" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="d3af270c-dcc5-49f4-dfef-b8d0e300b382" data-execution_count="24">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install palmerpenguins</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Requirement already satisfied: palmerpenguins in /opt/anaconda3/lib/python3.13/site-packages (0.1.4)
@@ -2262,7 +2263,7 @@ Requirement already satisfied: tzdata&gt;=2022.7 in /opt/anaconda3/lib/python3.1
 Requirement already satisfied: six&gt;=1.5 in /Applications/Positron.app/Contents/Resources/app/extensions/positron-python/python_files/lib/ipykernel/py3 (from python-dateutil&gt;=2.8.2-&gt;pandas-&gt;palmerpenguins) (1.17.0)</code></pre>
 </div>
 </div>
-<div id="cell-3" class="cell" data-execution_count="4">
+<div id="cell-4" class="cell" data-execution_count="25">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import libraries</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -2270,7 +2271,7 @@ Requirement already satisfied: six&gt;=1.5 in /Applications/Positron.app/Content
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes, geom_point, geom_line, labs, theme_minimal</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:206}}" data-outputid="fcbc5d8d-c7bc-4d58-fc34-03725d8672ee" data-execution_count="5">
+<div id="cell-5" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:206}}" data-outputid="fcbc5d8d-c7bc-4d58-fc34-03725d8672ee" data-execution_count="26">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="op">=</span> load_penguins()</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>penguins.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -2353,7 +2354,7 @@ Requirement already satisfied: six&gt;=1.5 in /Applications/Positron.app/Content
 </div>
 </div>
 </div>
-<div id="cell-5" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="eaa8ce20-388f-4aa3-a172-50c52b4d5494" data-execution_count="6">
+<div id="cell-6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="eaa8ce20-388f-4aa3-a172-50c52b4d5494" data-execution_count="27">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>penguins.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
@@ -2373,7 +2374,7 @@ dtypes: float64(4), int64(1), object(3)
 memory usage: 21.6+ KB</code></pre>
 </div>
 </div>
-<div id="cell-6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:334}}" data-outputid="1d3f7c85-72ee-40fa-8bbe-0020582dd164" data-execution_count="7">
+<div id="cell-7" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:334}}" data-outputid="1d3f7c85-72ee-40fa-8bbe-0020582dd164" data-execution_count="28">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="op">=</span> load_penguins().dropna() <span class="co">#removing the missing values from the dataframe</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>penguins[<span class="st">&quot;bill_length_mm&quot;</span>].describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -2398,7 +2399,7 @@ Name: bill_length_mm, dtype: float64</code></pre>
 </ul>
 <p>Make predictions for each model and plot your fitted models on the scatterplot.</p>
 <p>#Simple linear regression (e.g. straight-line) model</p>
-<div id="cell-10" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:79}}" data-outputid="2046a690-3a4d-4e50-f003-38bfb48a5ad4" data-execution_count="8">
+<div id="cell-11" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:79}}" data-outputid="2046a690-3a4d-4e50-f003-38bfb48a5ad4" data-execution_count="29">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>bill_model <span class="op">=</span> LinearRegression() <span class="co"># specifying model for prediction</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> penguins[[<span class="st">&#39;bill_length_mm&#39;</span>]] <span class="co"># predictor variable</span></span>
@@ -2406,7 +2407,7 @@ Name: bill_length_mm, dtype: float64</code></pre>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>bill_model.fit(X, y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
-<style>#sk-container-id-1 {
+<style>#sk-container-id-5 {
 
 --sklearn-color-text: #000;
 --sklearn-color-text-muted: #666;
@@ -2434,13 +2435,13 @@ Name: bill_length_mm, dtype: float64</code></pre>
 --sklearn-color-icon: #878787;
 }
 }
-#sk-container-id-1 {
+#sk-container-id-5 {
 color: var(--sklearn-color-text);
 }
-#sk-container-id-1 pre {
+#sk-container-id-5 pre {
 padding: 0;
 }
-#sk-container-id-1 input.sk-hidden--visually {
+#sk-container-id-5 input.sk-hidden--visually {
 border: 0;
 clip: rect(1px 1px 1px 1px);
 clip: rect(1px, 1px, 1px, 1px);
@@ -2451,19 +2452,19 @@ padding: 0;
 position: absolute;
 width: 1px;
 }
-#sk-container-id-1 div.sk-dashed-wrapped {
+#sk-container-id-5 div.sk-dashed-wrapped {
 border: 1px dashed var(--sklearn-color-line);
 margin: 0 0.4em 0.5em 0.4em;
 box-sizing: border-box;
 padding-bottom: 0.4em;
 background-color: var(--sklearn-color-background);
 }
-#sk-container-id-1 div.sk-container {
+#sk-container-id-5 div.sk-container {
 
 display: inline-block !important;
 position: relative;
 }
-#sk-container-id-1 div.sk-text-repr-fallback {
+#sk-container-id-5 div.sk-text-repr-fallback {
 display: none;
 }
 div.sk-parallel-item,
@@ -2476,36 +2477,36 @@ background-repeat: no-repeat;
 background-position: center center;
 }
 
-#sk-container-id-1 div.sk-parallel-item::after {
+#sk-container-id-5 div.sk-parallel-item::after {
 content: "";
 width: 100%;
 border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
 flex-grow: 1;
 }
-#sk-container-id-1 div.sk-parallel {
+#sk-container-id-5 div.sk-parallel {
 display: flex;
 align-items: stretch;
 justify-content: center;
 background-color: var(--sklearn-color-background);
 position: relative;
 }
-#sk-container-id-1 div.sk-parallel-item {
+#sk-container-id-5 div.sk-parallel-item {
 display: flex;
 flex-direction: column;
 }
-#sk-container-id-1 div.sk-parallel-item:first-child::after {
+#sk-container-id-5 div.sk-parallel-item:first-child::after {
 align-self: flex-end;
 width: 50%;
 }
-#sk-container-id-1 div.sk-parallel-item:last-child::after {
+#sk-container-id-5 div.sk-parallel-item:last-child::after {
 align-self: flex-start;
 width: 50%;
 }
-#sk-container-id-1 div.sk-parallel-item:only-child::after {
+#sk-container-id-5 div.sk-parallel-item:only-child::after {
 width: 0;
 }
 
-#sk-container-id-1 div.sk-serial {
+#sk-container-id-5 div.sk-serial {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -2515,12 +2516,12 @@ padding-left: 1em;
 }
 
 
-#sk-container-id-1 div.sk-toggleable {
+#sk-container-id-5 div.sk-toggleable {
 
 background-color: var(--sklearn-color-background);
 }
 
-#sk-container-id-1 label.sk-toggleable__label {
+#sk-container-id-5 label.sk-toggleable__label {
 cursor: pointer;
 display: flex;
 width: 100%;
@@ -2532,23 +2533,23 @@ align-items: start;
 justify-content: space-between;
 gap: 0.5em;
 }
-#sk-container-id-1 label.sk-toggleable__label .caption {
+#sk-container-id-5 label.sk-toggleable__label .caption {
 font-size: 0.6rem;
 font-weight: lighter;
 color: var(--sklearn-color-text-muted);
 }
-#sk-container-id-1 label.sk-toggleable__label-arrow:before {
+#sk-container-id-5 label.sk-toggleable__label-arrow:before {
 
 content: "▸";
 float: left;
 margin-right: 0.25em;
 color: var(--sklearn-color-icon);
 }
-#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {
+#sk-container-id-5 label.sk-toggleable__label-arrow:hover:before {
 color: var(--sklearn-color-text);
 }
 
-#sk-container-id-1 div.sk-toggleable__content {
+#sk-container-id-5 div.sk-toggleable__content {
 max-height: 0;
 max-width: 0;
 overflow: hidden;
@@ -2556,75 +2557,75 @@ text-align: left;
 
 background-color: var(--sklearn-color-unfitted-level-0);
 }
-#sk-container-id-1 div.sk-toggleable__content.fitted {
+#sk-container-id-5 div.sk-toggleable__content.fitted {
 
 background-color: var(--sklearn-color-fitted-level-0);
 }
-#sk-container-id-1 div.sk-toggleable__content pre {
+#sk-container-id-5 div.sk-toggleable__content pre {
 margin: 0.2em;
 border-radius: 0.25em;
 color: var(--sklearn-color-text);
 
 background-color: var(--sklearn-color-unfitted-level-0);
 }
-#sk-container-id-1 div.sk-toggleable__content.fitted pre {
+#sk-container-id-5 div.sk-toggleable__content.fitted pre {
 
 background-color: var(--sklearn-color-fitted-level-0);
 }
-#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+#sk-container-id-5 input.sk-toggleable__control:checked~div.sk-toggleable__content {
 
 max-height: 200px;
 max-width: 100%;
 overflow: auto;
 }
-#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+#sk-container-id-5 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
 content: "▾";
 }
 
-#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-5 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
 color: var(--sklearn-color-text);
 background-color: var(--sklearn-color-unfitted-level-2);
 }
-#sk-container-id-1 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-5 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
 background-color: var(--sklearn-color-fitted-level-2);
 }
 
 
-#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-5 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
 
 background-color: var(--sklearn-color-unfitted-level-2);
 }
-#sk-container-id-1 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-5 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
 
 background-color: var(--sklearn-color-fitted-level-2);
 }
-#sk-container-id-1 div.sk-label label.sk-toggleable__label,
-#sk-container-id-1 div.sk-label label {
+#sk-container-id-5 div.sk-label label.sk-toggleable__label,
+#sk-container-id-5 div.sk-label label {
 
 color: var(--sklearn-color-text-on-default-background);
 }
 
-#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {
+#sk-container-id-5 div.sk-label:hover label.sk-toggleable__label {
 color: var(--sklearn-color-text);
 background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-1 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+#sk-container-id-5 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
 color: var(--sklearn-color-text);
 background-color: var(--sklearn-color-fitted-level-2);
 }
 
-#sk-container-id-1 div.sk-label label {
+#sk-container-id-5 div.sk-label label {
 font-family: monospace;
 font-weight: bold;
 display: inline-block;
 line-height: 1.2em;
 }
-#sk-container-id-1 div.sk-label-container {
+#sk-container-id-5 div.sk-label-container {
 text-align: center;
 }
 
-#sk-container-id-1 div.sk-estimator {
+#sk-container-id-5 div.sk-estimator {
 font-family: monospace;
 border: 1px dotted var(--sklearn-color-border-box);
 border-radius: 0.25em;
@@ -2633,16 +2634,16 @@ margin-bottom: 0.5em;
 
 background-color: var(--sklearn-color-unfitted-level-0);
 }
-#sk-container-id-1 div.sk-estimator.fitted {
+#sk-container-id-5 div.sk-estimator.fitted {
 
 background-color: var(--sklearn-color-fitted-level-0);
 }
 
-#sk-container-id-1 div.sk-estimator:hover {
+#sk-container-id-5 div.sk-estimator:hover {
 
 background-color: var(--sklearn-color-unfitted-level-2);
 }
-#sk-container-id-1 div.sk-estimator.fitted:hover {
+#sk-container-id-5 div.sk-estimator.fitted:hover {
 
 background-color: var(--sklearn-color-fitted-level-2);
 }
@@ -2720,7 +2721,7 @@ display: block;
 }
 /* "?"-specific style due to the `<a>` HTML tag */
 
-#sk-container-id-1 a.estimator_doc_link {
+#sk-container-id-5 a.estimator_doc_link {
   float: right;
   font-size: 1rem;
   line-height: 1em;
@@ -2735,34 +2736,34 @@ display: block;
   border: var(--sklearn-color-unfitted-level-1) 1pt solid;
 }
 
-#sk-container-id-1 a.estimator_doc_link.fitted {
+#sk-container-id-5 a.estimator_doc_link.fitted {
   /* fitted */
   border: var(--sklearn-color-fitted-level-1) 1pt solid;
   color: var(--sklearn-color-fitted-level-1);
 }
 
 /* On hover */
-#sk-container-id-1 a.estimator_doc_link:hover {
+#sk-container-id-5 a.estimator_doc_link:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-3);
   color: var(--sklearn-color-background);
   text-decoration: none;
 }
 
-#sk-container-id-1 a.estimator_doc_link.fitted:hover {
+#sk-container-id-5 a.estimator_doc_link.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LinearRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div></div></div>
+</style><div id="sk-container-id-5" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-5" type="checkbox" checked><label for="sk-estimator-id-5" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LinearRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div></div></div>
 </div>
 </div>
-<div id="cell-11" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="102221bf-ef56-4e26-ef24-96f46ef25d91" data-execution_count="9">
+<div id="cell-12" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="102221bf-ef56-4e26-ef24-96f46ef25d91" data-execution_count="30">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>bill_model.coef_, bill_model.intercept_</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <pre><code>(array([-0.08232675]), np.float64(20.786648668433827))</code></pre>
 </div>
 </div>
-<div id="cell-12" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="aa908515-aa74-48f6-f18f-65170d4d120f" data-execution_count="10">
+<div id="cell-13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="aa908515-aa74-48f6-f18f-65170d4d120f" data-execution_count="31">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding model predictions to a dataframe to be used later for the scatter plot</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>df_pred <span class="op">=</span> penguins[[<span class="st">&#39;bill_length_mm&#39;</span>, <span class="st">&#39;bill_depth_mm&#39;</span>]].copy()</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>df_pred[<span class="st">&#39;bill_depth_pred_simple&#39;</span>] <span class="op">=</span> bill_model.predict(X)</span>
@@ -2855,7 +2856,7 @@ display: block;
 </div>
 </div>
 <p>#Quadratic (degree 2 polynomial) model</p>
-<div id="cell-14" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:206}}" data-outputid="eb2dcd92-8122-4b90-9be1-0c8ad8e72a0e" data-execution_count="11">
+<div id="cell-15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:206}}" data-outputid="eb2dcd92-8122-4b90-9be1-0c8ad8e72a0e" data-execution_count="32">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>penguins[<span class="st">&quot;bill_length_square&quot;</span>] <span class="op">=</span> penguins[<span class="st">&quot;bill_length_mm&quot;</span>]<span class="op">**</span><span class="dv">2</span>  <span class="co">#creating a new column in dataframe for squared values</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>penguins.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -2944,7 +2945,7 @@ display: block;
 </div>
 </div>
 </div>
-<div id="cell-15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:79}}" data-outputid="4bedb835-782f-4c8a-cb5a-558245c58874" data-execution_count="12">
+<div id="cell-16" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:79}}" data-outputid="4bedb835-782f-4c8a-cb5a-558245c58874" data-execution_count="33">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>square_model <span class="op">=</span> LinearRegression() <span class="co">#specifying model for prediction</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> penguins[[<span class="st">&quot;bill_length_mm&quot;</span>, <span class="st">&quot;bill_length_square&quot;</span>]]</span>
@@ -2952,7 +2953,7 @@ display: block;
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>square_model.fit(X, y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
-<style>#sk-container-id-2 {
+<style>#sk-container-id-6 {
 
 --sklearn-color-text: #000;
 --sklearn-color-text-muted: #666;
@@ -2980,13 +2981,13 @@ display: block;
 --sklearn-color-icon: #878787;
 }
 }
-#sk-container-id-2 {
+#sk-container-id-6 {
 color: var(--sklearn-color-text);
 }
-#sk-container-id-2 pre {
+#sk-container-id-6 pre {
 padding: 0;
 }
-#sk-container-id-2 input.sk-hidden--visually {
+#sk-container-id-6 input.sk-hidden--visually {
 border: 0;
 clip: rect(1px 1px 1px 1px);
 clip: rect(1px, 1px, 1px, 1px);
@@ -2997,19 +2998,19 @@ padding: 0;
 position: absolute;
 width: 1px;
 }
-#sk-container-id-2 div.sk-dashed-wrapped {
+#sk-container-id-6 div.sk-dashed-wrapped {
 border: 1px dashed var(--sklearn-color-line);
 margin: 0 0.4em 0.5em 0.4em;
 box-sizing: border-box;
 padding-bottom: 0.4em;
 background-color: var(--sklearn-color-background);
 }
-#sk-container-id-2 div.sk-container {
+#sk-container-id-6 div.sk-container {
 
 display: inline-block !important;
 position: relative;
 }
-#sk-container-id-2 div.sk-text-repr-fallback {
+#sk-container-id-6 div.sk-text-repr-fallback {
 display: none;
 }
 div.sk-parallel-item,
@@ -3022,36 +3023,36 @@ background-repeat: no-repeat;
 background-position: center center;
 }
 
-#sk-container-id-2 div.sk-parallel-item::after {
+#sk-container-id-6 div.sk-parallel-item::after {
 content: "";
 width: 100%;
 border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
 flex-grow: 1;
 }
-#sk-container-id-2 div.sk-parallel {
+#sk-container-id-6 div.sk-parallel {
 display: flex;
 align-items: stretch;
 justify-content: center;
 background-color: var(--sklearn-color-background);
 position: relative;
 }
-#sk-container-id-2 div.sk-parallel-item {
+#sk-container-id-6 div.sk-parallel-item {
 display: flex;
 flex-direction: column;
 }
-#sk-container-id-2 div.sk-parallel-item:first-child::after {
+#sk-container-id-6 div.sk-parallel-item:first-child::after {
 align-self: flex-end;
 width: 50%;
 }
-#sk-container-id-2 div.sk-parallel-item:last-child::after {
+#sk-container-id-6 div.sk-parallel-item:last-child::after {
 align-self: flex-start;
 width: 50%;
 }
-#sk-container-id-2 div.sk-parallel-item:only-child::after {
+#sk-container-id-6 div.sk-parallel-item:only-child::after {
 width: 0;
 }
 
-#sk-container-id-2 div.sk-serial {
+#sk-container-id-6 div.sk-serial {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -3061,12 +3062,12 @@ padding-left: 1em;
 }
 
 
-#sk-container-id-2 div.sk-toggleable {
+#sk-container-id-6 div.sk-toggleable {
 
 background-color: var(--sklearn-color-background);
 }
 
-#sk-container-id-2 label.sk-toggleable__label {
+#sk-container-id-6 label.sk-toggleable__label {
 cursor: pointer;
 display: flex;
 width: 100%;
@@ -3078,23 +3079,23 @@ align-items: start;
 justify-content: space-between;
 gap: 0.5em;
 }
-#sk-container-id-2 label.sk-toggleable__label .caption {
+#sk-container-id-6 label.sk-toggleable__label .caption {
 font-size: 0.6rem;
 font-weight: lighter;
 color: var(--sklearn-color-text-muted);
 }
-#sk-container-id-2 label.sk-toggleable__label-arrow:before {
+#sk-container-id-6 label.sk-toggleable__label-arrow:before {
 
 content: "▸";
 float: left;
 margin-right: 0.25em;
 color: var(--sklearn-color-icon);
 }
-#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {
+#sk-container-id-6 label.sk-toggleable__label-arrow:hover:before {
 color: var(--sklearn-color-text);
 }
 
-#sk-container-id-2 div.sk-toggleable__content {
+#sk-container-id-6 div.sk-toggleable__content {
 max-height: 0;
 max-width: 0;
 overflow: hidden;
@@ -3102,75 +3103,75 @@ text-align: left;
 
 background-color: var(--sklearn-color-unfitted-level-0);
 }
-#sk-container-id-2 div.sk-toggleable__content.fitted {
+#sk-container-id-6 div.sk-toggleable__content.fitted {
 
 background-color: var(--sklearn-color-fitted-level-0);
 }
-#sk-container-id-2 div.sk-toggleable__content pre {
+#sk-container-id-6 div.sk-toggleable__content pre {
 margin: 0.2em;
 border-radius: 0.25em;
 color: var(--sklearn-color-text);
 
 background-color: var(--sklearn-color-unfitted-level-0);
 }
-#sk-container-id-2 div.sk-toggleable__content.fitted pre {
+#sk-container-id-6 div.sk-toggleable__content.fitted pre {
 
 background-color: var(--sklearn-color-fitted-level-0);
 }
-#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+#sk-container-id-6 input.sk-toggleable__control:checked~div.sk-toggleable__content {
 
 max-height: 200px;
 max-width: 100%;
 overflow: auto;
 }
-#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+#sk-container-id-6 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
 content: "▾";
 }
 
-#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-6 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
 color: var(--sklearn-color-text);
 background-color: var(--sklearn-color-unfitted-level-2);
 }
-#sk-container-id-2 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-6 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
 background-color: var(--sklearn-color-fitted-level-2);
 }
 
 
-#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-6 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
 
 background-color: var(--sklearn-color-unfitted-level-2);
 }
-#sk-container-id-2 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-6 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
 
 background-color: var(--sklearn-color-fitted-level-2);
 }
-#sk-container-id-2 div.sk-label label.sk-toggleable__label,
-#sk-container-id-2 div.sk-label label {
+#sk-container-id-6 div.sk-label label.sk-toggleable__label,
+#sk-container-id-6 div.sk-label label {
 
 color: var(--sklearn-color-text-on-default-background);
 }
 
-#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {
+#sk-container-id-6 div.sk-label:hover label.sk-toggleable__label {
 color: var(--sklearn-color-text);
 background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-2 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+#sk-container-id-6 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
 color: var(--sklearn-color-text);
 background-color: var(--sklearn-color-fitted-level-2);
 }
 
-#sk-container-id-2 div.sk-label label {
+#sk-container-id-6 div.sk-label label {
 font-family: monospace;
 font-weight: bold;
 display: inline-block;
 line-height: 1.2em;
 }
-#sk-container-id-2 div.sk-label-container {
+#sk-container-id-6 div.sk-label-container {
 text-align: center;
 }
 
-#sk-container-id-2 div.sk-estimator {
+#sk-container-id-6 div.sk-estimator {
 font-family: monospace;
 border: 1px dotted var(--sklearn-color-border-box);
 border-radius: 0.25em;
@@ -3179,16 +3180,16 @@ margin-bottom: 0.5em;
 
 background-color: var(--sklearn-color-unfitted-level-0);
 }
-#sk-container-id-2 div.sk-estimator.fitted {
+#sk-container-id-6 div.sk-estimator.fitted {
 
 background-color: var(--sklearn-color-fitted-level-0);
 }
 
-#sk-container-id-2 div.sk-estimator:hover {
+#sk-container-id-6 div.sk-estimator:hover {
 
 background-color: var(--sklearn-color-unfitted-level-2);
 }
-#sk-container-id-2 div.sk-estimator.fitted:hover {
+#sk-container-id-6 div.sk-estimator.fitted:hover {
 
 background-color: var(--sklearn-color-fitted-level-2);
 }
@@ -3266,7 +3267,7 @@ display: block;
 }
 /* "?"-specific style due to the `<a>` HTML tag */
 
-#sk-container-id-2 a.estimator_doc_link {
+#sk-container-id-6 a.estimator_doc_link {
   float: right;
   font-size: 1rem;
   line-height: 1em;
@@ -3281,34 +3282,34 @@ display: block;
   border: var(--sklearn-color-unfitted-level-1) 1pt solid;
 }
 
-#sk-container-id-2 a.estimator_doc_link.fitted {
+#sk-container-id-6 a.estimator_doc_link.fitted {
   /* fitted */
   border: var(--sklearn-color-fitted-level-1) 1pt solid;
   color: var(--sklearn-color-fitted-level-1);
 }
 
 /* On hover */
-#sk-container-id-2 a.estimator_doc_link:hover {
+#sk-container-id-6 a.estimator_doc_link:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-3);
   color: var(--sklearn-color-background);
   text-decoration: none;
 }
 
-#sk-container-id-2 a.estimator_doc_link.fitted:hover {
+#sk-container-id-6 a.estimator_doc_link.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LinearRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div></div></div>
+</style><div id="sk-container-id-6" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-6" type="checkbox" checked><label for="sk-estimator-id-6" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LinearRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div></div></div>
 </div>
 </div>
-<div id="cell-16" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="76b027a1-52c4-408e-c772-8003fec33826" data-execution_count="13">
+<div id="cell-17" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="76b027a1-52c4-408e-c772-8003fec33826" data-execution_count="34">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>square_model.coef_, square_model.intercept_</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <pre><code>(array([-1.40407712,  0.01498039]), np.float64(49.49494362318971))</code></pre>
 </div>
 </div>
-<div id="cell-17" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="d5ecb980-d790-4cb1-dc02-5f8a71b48320" data-execution_count="14">
+<div id="cell-18" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="d5ecb980-d790-4cb1-dc02-5f8a71b48320" data-execution_count="35">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df_pred[<span class="st">&#39;bill_depth_pred_quad&#39;</span>] <span class="op">=</span> square_model.predict(X)</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>df_pred</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -3412,7 +3413,7 @@ display: block;
 </div>
 <section id="cubic-degree-3-polynomial-model" class="level1">
 <h1>Cubic (degree 3 polynomial) model</h1>
-<div id="cell-19" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:206}}" data-outputid="01799de2-c07b-4f80-ea07-5773d20b5334" data-execution_count="15">
+<div id="cell-20" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:206}}" data-outputid="01799de2-c07b-4f80-ea07-5773d20b5334" data-execution_count="36">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>penguins[<span class="st">&quot;bill_length_cube&quot;</span>] <span class="op">=</span> penguins[<span class="st">&quot;bill_length_mm&quot;</span>]<span class="op">**</span><span class="dv">3</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>penguins.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -3507,7 +3508,7 @@ display: block;
 </div>
 </div>
 </div>
-<div id="cell-20" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:79}}" data-outputid="88b3cfec-e111-4a61-ac64-a59f075726ef" data-execution_count="16">
+<div id="cell-21" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:79}}" data-outputid="88b3cfec-e111-4a61-ac64-a59f075726ef" data-execution_count="37">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>cubic_model <span class="op">=</span> LinearRegression()</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> penguins[[<span class="st">&quot;bill_length_mm&quot;</span>, <span class="st">&quot;bill_length_square&quot;</span>, <span class="st">&quot;bill_length_cube&quot;</span>]]</span>
@@ -3515,7 +3516,7 @@ display: block;
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>cubic_model.fit(X, y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
-<style>#sk-container-id-3 {
+<style>#sk-container-id-7 {
 
 --sklearn-color-text: #000;
 --sklearn-color-text-muted: #666;
@@ -3543,13 +3544,13 @@ display: block;
 --sklearn-color-icon: #878787;
 }
 }
-#sk-container-id-3 {
+#sk-container-id-7 {
 color: var(--sklearn-color-text);
 }
-#sk-container-id-3 pre {
+#sk-container-id-7 pre {
 padding: 0;
 }
-#sk-container-id-3 input.sk-hidden--visually {
+#sk-container-id-7 input.sk-hidden--visually {
 border: 0;
 clip: rect(1px 1px 1px 1px);
 clip: rect(1px, 1px, 1px, 1px);
@@ -3560,19 +3561,19 @@ padding: 0;
 position: absolute;
 width: 1px;
 }
-#sk-container-id-3 div.sk-dashed-wrapped {
+#sk-container-id-7 div.sk-dashed-wrapped {
 border: 1px dashed var(--sklearn-color-line);
 margin: 0 0.4em 0.5em 0.4em;
 box-sizing: border-box;
 padding-bottom: 0.4em;
 background-color: var(--sklearn-color-background);
 }
-#sk-container-id-3 div.sk-container {
+#sk-container-id-7 div.sk-container {
 
 display: inline-block !important;
 position: relative;
 }
-#sk-container-id-3 div.sk-text-repr-fallback {
+#sk-container-id-7 div.sk-text-repr-fallback {
 display: none;
 }
 div.sk-parallel-item,
@@ -3585,36 +3586,36 @@ background-repeat: no-repeat;
 background-position: center center;
 }
 
-#sk-container-id-3 div.sk-parallel-item::after {
+#sk-container-id-7 div.sk-parallel-item::after {
 content: "";
 width: 100%;
 border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
 flex-grow: 1;
 }
-#sk-container-id-3 div.sk-parallel {
+#sk-container-id-7 div.sk-parallel {
 display: flex;
 align-items: stretch;
 justify-content: center;
 background-color: var(--sklearn-color-background);
 position: relative;
 }
-#sk-container-id-3 div.sk-parallel-item {
+#sk-container-id-7 div.sk-parallel-item {
 display: flex;
 flex-direction: column;
 }
-#sk-container-id-3 div.sk-parallel-item:first-child::after {
+#sk-container-id-7 div.sk-parallel-item:first-child::after {
 align-self: flex-end;
 width: 50%;
 }
-#sk-container-id-3 div.sk-parallel-item:last-child::after {
+#sk-container-id-7 div.sk-parallel-item:last-child::after {
 align-self: flex-start;
 width: 50%;
 }
-#sk-container-id-3 div.sk-parallel-item:only-child::after {
+#sk-container-id-7 div.sk-parallel-item:only-child::after {
 width: 0;
 }
 
-#sk-container-id-3 div.sk-serial {
+#sk-container-id-7 div.sk-serial {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -3624,12 +3625,12 @@ padding-left: 1em;
 }
 
 
-#sk-container-id-3 div.sk-toggleable {
+#sk-container-id-7 div.sk-toggleable {
 
 background-color: var(--sklearn-color-background);
 }
 
-#sk-container-id-3 label.sk-toggleable__label {
+#sk-container-id-7 label.sk-toggleable__label {
 cursor: pointer;
 display: flex;
 width: 100%;
@@ -3641,23 +3642,23 @@ align-items: start;
 justify-content: space-between;
 gap: 0.5em;
 }
-#sk-container-id-3 label.sk-toggleable__label .caption {
+#sk-container-id-7 label.sk-toggleable__label .caption {
 font-size: 0.6rem;
 font-weight: lighter;
 color: var(--sklearn-color-text-muted);
 }
-#sk-container-id-3 label.sk-toggleable__label-arrow:before {
+#sk-container-id-7 label.sk-toggleable__label-arrow:before {
 
 content: "▸";
 float: left;
 margin-right: 0.25em;
 color: var(--sklearn-color-icon);
 }
-#sk-container-id-3 label.sk-toggleable__label-arrow:hover:before {
+#sk-container-id-7 label.sk-toggleable__label-arrow:hover:before {
 color: var(--sklearn-color-text);
 }
 
-#sk-container-id-3 div.sk-toggleable__content {
+#sk-container-id-7 div.sk-toggleable__content {
 max-height: 0;
 max-width: 0;
 overflow: hidden;
@@ -3665,75 +3666,75 @@ text-align: left;
 
 background-color: var(--sklearn-color-unfitted-level-0);
 }
-#sk-container-id-3 div.sk-toggleable__content.fitted {
+#sk-container-id-7 div.sk-toggleable__content.fitted {
 
 background-color: var(--sklearn-color-fitted-level-0);
 }
-#sk-container-id-3 div.sk-toggleable__content pre {
+#sk-container-id-7 div.sk-toggleable__content pre {
 margin: 0.2em;
 border-radius: 0.25em;
 color: var(--sklearn-color-text);
 
 background-color: var(--sklearn-color-unfitted-level-0);
 }
-#sk-container-id-3 div.sk-toggleable__content.fitted pre {
+#sk-container-id-7 div.sk-toggleable__content.fitted pre {
 
 background-color: var(--sklearn-color-fitted-level-0);
 }
-#sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+#sk-container-id-7 input.sk-toggleable__control:checked~div.sk-toggleable__content {
 
 max-height: 200px;
 max-width: 100%;
 overflow: auto;
 }
-#sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+#sk-container-id-7 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
 content: "▾";
 }
 
-#sk-container-id-3 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-7 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
 color: var(--sklearn-color-text);
 background-color: var(--sklearn-color-unfitted-level-2);
 }
-#sk-container-id-3 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-7 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
 background-color: var(--sklearn-color-fitted-level-2);
 }
 
 
-#sk-container-id-3 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-7 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
 
 background-color: var(--sklearn-color-unfitted-level-2);
 }
-#sk-container-id-3 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-7 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
 
 background-color: var(--sklearn-color-fitted-level-2);
 }
-#sk-container-id-3 div.sk-label label.sk-toggleable__label,
-#sk-container-id-3 div.sk-label label {
+#sk-container-id-7 div.sk-label label.sk-toggleable__label,
+#sk-container-id-7 div.sk-label label {
 
 color: var(--sklearn-color-text-on-default-background);
 }
 
-#sk-container-id-3 div.sk-label:hover label.sk-toggleable__label {
+#sk-container-id-7 div.sk-label:hover label.sk-toggleable__label {
 color: var(--sklearn-color-text);
 background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-3 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+#sk-container-id-7 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
 color: var(--sklearn-color-text);
 background-color: var(--sklearn-color-fitted-level-2);
 }
 
-#sk-container-id-3 div.sk-label label {
+#sk-container-id-7 div.sk-label label {
 font-family: monospace;
 font-weight: bold;
 display: inline-block;
 line-height: 1.2em;
 }
-#sk-container-id-3 div.sk-label-container {
+#sk-container-id-7 div.sk-label-container {
 text-align: center;
 }
 
-#sk-container-id-3 div.sk-estimator {
+#sk-container-id-7 div.sk-estimator {
 font-family: monospace;
 border: 1px dotted var(--sklearn-color-border-box);
 border-radius: 0.25em;
@@ -3742,16 +3743,16 @@ margin-bottom: 0.5em;
 
 background-color: var(--sklearn-color-unfitted-level-0);
 }
-#sk-container-id-3 div.sk-estimator.fitted {
+#sk-container-id-7 div.sk-estimator.fitted {
 
 background-color: var(--sklearn-color-fitted-level-0);
 }
 
-#sk-container-id-3 div.sk-estimator:hover {
+#sk-container-id-7 div.sk-estimator:hover {
 
 background-color: var(--sklearn-color-unfitted-level-2);
 }
-#sk-container-id-3 div.sk-estimator.fitted:hover {
+#sk-container-id-7 div.sk-estimator.fitted:hover {
 
 background-color: var(--sklearn-color-fitted-level-2);
 }
@@ -3829,7 +3830,7 @@ display: block;
 }
 /* "?"-specific style due to the `<a>` HTML tag */
 
-#sk-container-id-3 a.estimator_doc_link {
+#sk-container-id-7 a.estimator_doc_link {
   float: right;
   font-size: 1rem;
   line-height: 1em;
@@ -3844,35 +3845,35 @@ display: block;
   border: var(--sklearn-color-unfitted-level-1) 1pt solid;
 }
 
-#sk-container-id-3 a.estimator_doc_link.fitted {
+#sk-container-id-7 a.estimator_doc_link.fitted {
   /* fitted */
   border: var(--sklearn-color-fitted-level-1) 1pt solid;
   color: var(--sklearn-color-fitted-level-1);
 }
 
 /* On hover */
-#sk-container-id-3 a.estimator_doc_link:hover {
+#sk-container-id-7 a.estimator_doc_link:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-3);
   color: var(--sklearn-color-background);
   text-decoration: none;
 }
 
-#sk-container-id-3 a.estimator_doc_link.fitted:hover {
+#sk-container-id-7 a.estimator_doc_link.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-</style><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" checked><label for="sk-estimator-id-3" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LinearRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div></div></div>
+</style><div id="sk-container-id-7" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-7" type="checkbox" checked><label for="sk-estimator-id-7" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LinearRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div></div></div>
 </div>
 </div>
-<div id="cell-21" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="b276b2f5-352d-413d-bf48-e2076ba0b14d" data-execution_count="17">
+<div id="cell-22" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="b276b2f5-352d-413d-bf48-e2076ba0b14d" data-execution_count="38">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>cubic_model.coef_, cubic_model.intercept_</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <pre><code>(array([ 6.77963360e+00, -1.68915134e-01,  1.36264370e-03]),
  np.float64(-70.53172659621671))</code></pre>
 </div>
 </div>
-<div id="cell-22" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="1fcec957-430e-4f71-e9b7-7674d509d41a" data-execution_count="18">
+<div id="cell-23" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="1fcec957-430e-4f71-e9b7-7674d509d41a" data-execution_count="39">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df_pred[<span class="st">&#39;bill_depth_pred_cubic&#39;</span>] <span class="op">=</span> cubic_model.predict(X)</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>df_pred</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -3989,7 +3990,7 @@ display: block;
 </section>
 <section id="degree-10-polynomial-model" class="level1">
 <h1>Degree 10 polynomial model</h1>
-<div id="cell-24" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:226}}" data-outputid="12d4a6d7-046d-4ed0-e4e2-72036fe5eff1" data-execution_count="19">
+<div id="cell-25" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:226}}" data-outputid="12d4a6d7-046d-4ed0-e4e2-72036fe5eff1" data-execution_count="40">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>penguins[<span class="st">&quot;bill_length_deg4&quot;</span>] <span class="op">=</span> penguins[<span class="st">&quot;bill_length_mm&quot;</span>]<span class="op">**</span><span class="dv">4</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>penguins[<span class="st">&quot;bill_length_deg5&quot;</span>] <span class="op">=</span> penguins[<span class="st">&quot;bill_length_mm&quot;</span>]<span class="op">**</span><span class="dv">5</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>penguins[<span class="st">&quot;bill_length_deg6&quot;</span>] <span class="op">=</span> penguins[<span class="st">&quot;bill_length_mm&quot;</span>]<span class="op">**</span><span class="dv">6</span></span>
@@ -4133,7 +4134,7 @@ display: block;
 </div>
 </div>
 </div>
-<div id="cell-25" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:79}}" data-outputid="5c781b1b-0c7f-42da-e7cf-e7ebff3cb49e" data-execution_count="20">
+<div id="cell-26" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:79}}" data-outputid="5c781b1b-0c7f-42da-e7cf-e7ebff3cb49e" data-execution_count="41">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>deg10_model <span class="op">=</span> LinearRegression()</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> penguins[[<span class="st">&quot;bill_length_mm&quot;</span>, <span class="st">&quot;bill_length_square&quot;</span>, <span class="st">&quot;bill_length_cube&quot;</span>,</span>
@@ -4145,7 +4146,7 @@ display: block;
 <span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>deg10_model.fit(X, y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
-<style>#sk-container-id-4 {
+<style>#sk-container-id-8 {
 
 --sklearn-color-text: #000;
 --sklearn-color-text-muted: #666;
@@ -4173,13 +4174,13 @@ display: block;
 --sklearn-color-icon: #878787;
 }
 }
-#sk-container-id-4 {
+#sk-container-id-8 {
 color: var(--sklearn-color-text);
 }
-#sk-container-id-4 pre {
+#sk-container-id-8 pre {
 padding: 0;
 }
-#sk-container-id-4 input.sk-hidden--visually {
+#sk-container-id-8 input.sk-hidden--visually {
 border: 0;
 clip: rect(1px 1px 1px 1px);
 clip: rect(1px, 1px, 1px, 1px);
@@ -4190,19 +4191,19 @@ padding: 0;
 position: absolute;
 width: 1px;
 }
-#sk-container-id-4 div.sk-dashed-wrapped {
+#sk-container-id-8 div.sk-dashed-wrapped {
 border: 1px dashed var(--sklearn-color-line);
 margin: 0 0.4em 0.5em 0.4em;
 box-sizing: border-box;
 padding-bottom: 0.4em;
 background-color: var(--sklearn-color-background);
 }
-#sk-container-id-4 div.sk-container {
+#sk-container-id-8 div.sk-container {
 
 display: inline-block !important;
 position: relative;
 }
-#sk-container-id-4 div.sk-text-repr-fallback {
+#sk-container-id-8 div.sk-text-repr-fallback {
 display: none;
 }
 div.sk-parallel-item,
@@ -4215,36 +4216,36 @@ background-repeat: no-repeat;
 background-position: center center;
 }
 
-#sk-container-id-4 div.sk-parallel-item::after {
+#sk-container-id-8 div.sk-parallel-item::after {
 content: "";
 width: 100%;
 border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
 flex-grow: 1;
 }
-#sk-container-id-4 div.sk-parallel {
+#sk-container-id-8 div.sk-parallel {
 display: flex;
 align-items: stretch;
 justify-content: center;
 background-color: var(--sklearn-color-background);
 position: relative;
 }
-#sk-container-id-4 div.sk-parallel-item {
+#sk-container-id-8 div.sk-parallel-item {
 display: flex;
 flex-direction: column;
 }
-#sk-container-id-4 div.sk-parallel-item:first-child::after {
+#sk-container-id-8 div.sk-parallel-item:first-child::after {
 align-self: flex-end;
 width: 50%;
 }
-#sk-container-id-4 div.sk-parallel-item:last-child::after {
+#sk-container-id-8 div.sk-parallel-item:last-child::after {
 align-self: flex-start;
 width: 50%;
 }
-#sk-container-id-4 div.sk-parallel-item:only-child::after {
+#sk-container-id-8 div.sk-parallel-item:only-child::after {
 width: 0;
 }
 
-#sk-container-id-4 div.sk-serial {
+#sk-container-id-8 div.sk-serial {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -4254,12 +4255,12 @@ padding-left: 1em;
 }
 
 
-#sk-container-id-4 div.sk-toggleable {
+#sk-container-id-8 div.sk-toggleable {
 
 background-color: var(--sklearn-color-background);
 }
 
-#sk-container-id-4 label.sk-toggleable__label {
+#sk-container-id-8 label.sk-toggleable__label {
 cursor: pointer;
 display: flex;
 width: 100%;
@@ -4271,23 +4272,23 @@ align-items: start;
 justify-content: space-between;
 gap: 0.5em;
 }
-#sk-container-id-4 label.sk-toggleable__label .caption {
+#sk-container-id-8 label.sk-toggleable__label .caption {
 font-size: 0.6rem;
 font-weight: lighter;
 color: var(--sklearn-color-text-muted);
 }
-#sk-container-id-4 label.sk-toggleable__label-arrow:before {
+#sk-container-id-8 label.sk-toggleable__label-arrow:before {
 
 content: "▸";
 float: left;
 margin-right: 0.25em;
 color: var(--sklearn-color-icon);
 }
-#sk-container-id-4 label.sk-toggleable__label-arrow:hover:before {
+#sk-container-id-8 label.sk-toggleable__label-arrow:hover:before {
 color: var(--sklearn-color-text);
 }
 
-#sk-container-id-4 div.sk-toggleable__content {
+#sk-container-id-8 div.sk-toggleable__content {
 max-height: 0;
 max-width: 0;
 overflow: hidden;
@@ -4295,75 +4296,75 @@ text-align: left;
 
 background-color: var(--sklearn-color-unfitted-level-0);
 }
-#sk-container-id-4 div.sk-toggleable__content.fitted {
+#sk-container-id-8 div.sk-toggleable__content.fitted {
 
 background-color: var(--sklearn-color-fitted-level-0);
 }
-#sk-container-id-4 div.sk-toggleable__content pre {
+#sk-container-id-8 div.sk-toggleable__content pre {
 margin: 0.2em;
 border-radius: 0.25em;
 color: var(--sklearn-color-text);
 
 background-color: var(--sklearn-color-unfitted-level-0);
 }
-#sk-container-id-4 div.sk-toggleable__content.fitted pre {
+#sk-container-id-8 div.sk-toggleable__content.fitted pre {
 
 background-color: var(--sklearn-color-fitted-level-0);
 }
-#sk-container-id-4 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+#sk-container-id-8 input.sk-toggleable__control:checked~div.sk-toggleable__content {
 
 max-height: 200px;
 max-width: 100%;
 overflow: auto;
 }
-#sk-container-id-4 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+#sk-container-id-8 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
 content: "▾";
 }
 
-#sk-container-id-4 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-8 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
 color: var(--sklearn-color-text);
 background-color: var(--sklearn-color-unfitted-level-2);
 }
-#sk-container-id-4 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-8 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
 background-color: var(--sklearn-color-fitted-level-2);
 }
 
 
-#sk-container-id-4 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-8 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
 
 background-color: var(--sklearn-color-unfitted-level-2);
 }
-#sk-container-id-4 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-8 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
 
 background-color: var(--sklearn-color-fitted-level-2);
 }
-#sk-container-id-4 div.sk-label label.sk-toggleable__label,
-#sk-container-id-4 div.sk-label label {
+#sk-container-id-8 div.sk-label label.sk-toggleable__label,
+#sk-container-id-8 div.sk-label label {
 
 color: var(--sklearn-color-text-on-default-background);
 }
 
-#sk-container-id-4 div.sk-label:hover label.sk-toggleable__label {
+#sk-container-id-8 div.sk-label:hover label.sk-toggleable__label {
 color: var(--sklearn-color-text);
 background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-4 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+#sk-container-id-8 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
 color: var(--sklearn-color-text);
 background-color: var(--sklearn-color-fitted-level-2);
 }
 
-#sk-container-id-4 div.sk-label label {
+#sk-container-id-8 div.sk-label label {
 font-family: monospace;
 font-weight: bold;
 display: inline-block;
 line-height: 1.2em;
 }
-#sk-container-id-4 div.sk-label-container {
+#sk-container-id-8 div.sk-label-container {
 text-align: center;
 }
 
-#sk-container-id-4 div.sk-estimator {
+#sk-container-id-8 div.sk-estimator {
 font-family: monospace;
 border: 1px dotted var(--sklearn-color-border-box);
 border-radius: 0.25em;
@@ -4372,16 +4373,16 @@ margin-bottom: 0.5em;
 
 background-color: var(--sklearn-color-unfitted-level-0);
 }
-#sk-container-id-4 div.sk-estimator.fitted {
+#sk-container-id-8 div.sk-estimator.fitted {
 
 background-color: var(--sklearn-color-fitted-level-0);
 }
 
-#sk-container-id-4 div.sk-estimator:hover {
+#sk-container-id-8 div.sk-estimator:hover {
 
 background-color: var(--sklearn-color-unfitted-level-2);
 }
-#sk-container-id-4 div.sk-estimator.fitted:hover {
+#sk-container-id-8 div.sk-estimator.fitted:hover {
 
 background-color: var(--sklearn-color-fitted-level-2);
 }
@@ -4459,7 +4460,7 @@ display: block;
 }
 /* "?"-specific style due to the `<a>` HTML tag */
 
-#sk-container-id-4 a.estimator_doc_link {
+#sk-container-id-8 a.estimator_doc_link {
   float: right;
   font-size: 1rem;
   line-height: 1em;
@@ -4474,28 +4475,28 @@ display: block;
   border: var(--sklearn-color-unfitted-level-1) 1pt solid;
 }
 
-#sk-container-id-4 a.estimator_doc_link.fitted {
+#sk-container-id-8 a.estimator_doc_link.fitted {
   /* fitted */
   border: var(--sklearn-color-fitted-level-1) 1pt solid;
   color: var(--sklearn-color-fitted-level-1);
 }
 
 /* On hover */
-#sk-container-id-4 a.estimator_doc_link:hover {
+#sk-container-id-8 a.estimator_doc_link:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-3);
   color: var(--sklearn-color-background);
   text-decoration: none;
 }
 
-#sk-container-id-4 a.estimator_doc_link.fitted:hover {
+#sk-container-id-8 a.estimator_doc_link.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-</style><div id="sk-container-id-4" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox" checked><label for="sk-estimator-id-4" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LinearRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div></div></div>
+</style><div id="sk-container-id-8" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-8" type="checkbox" checked><label for="sk-estimator-id-8" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LinearRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div></div></div>
 </div>
 </div>
-<div id="cell-26" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="4d64c57a-ddc6-436f-9876-e78d7c15a826" data-execution_count="21">
+<div id="cell-27" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="4d64c57a-ddc6-436f-9876-e78d7c15a826" data-execution_count="42">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>deg10_model.coef_, deg10_model.intercept_</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <pre><code>(array([ 9.30261877e-14,  4.60934140e-12,  1.56064783e-10,  4.04003958e-09,  7.67183179e-08,  8.42985453e-07,
@@ -4503,7 +4504,7 @@ display: block;
  np.float64(-21.34276657720836))</code></pre>
 </div>
 </div>
-<div id="cell-27" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="93a2aba4-5b9a-46ff-f6c0-383186c21174" data-execution_count="22">
+<div id="cell-28" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="93a2aba4-5b9a-46ff-f6c0-383186c21174" data-execution_count="43">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>df_pred[<span class="st">&#39;bill_depth_pred_deg10&#39;</span>] <span class="op">=</span> deg10_model.predict(X)</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>df_pred</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -4629,7 +4630,7 @@ display: block;
 </div>
 </div>
 </div>
-<div id="cell-28" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:497}}" data-outputid="0f452778-2c5a-4469-e655-3d7e96492c2f" data-execution_count="23">
+<div id="cell-29" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:497}}" data-outputid="0f452778-2c5a-4469-e655-3d7e96492c2f" data-execution_count="44">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>df_long <span class="op">=</span> df_pred.melt(</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    id_vars<span class="op">=</span>[<span class="st">&#39;bill_length_mm&#39;</span>, <span class="st">&#39;bill_depth_mm&#39;</span>],</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    value_vars<span class="op">=</span>[<span class="st">&#39;bill_depth_pred_simple&#39;</span>, <span class="st">&#39;bill_depth_pred_quad&#39;</span>,</span>
